@@ -1,0 +1,44 @@
+
+<header class="header">
+<nav class="container">
+  <%= image_tag 'Image 41.png', alt: 'Apple Logo', class: 'nav-logo' %>
+  <p class="jomhuria-regular nav-item">Green Grocer </p>
+  <%= link_to "Home", root_path,class:"palanquin-dark-regular nav-item" %>
+<!--  <a class="palanquin-dark-regular nav-item" href="#">Home</a>-->
+  <a class="palanquin-dark-regular nav-item" href="#">Shop</a>
+  <a class="palanquin-dark-regular nav-item" href="#">About</a>
+  <form>
+    <div class="search">
+    <span><%= image_tag '🦆 icon _magnifying glass_.png', alt: 'Search icon', class: 'search-logo' %></span>
+      <input class="search-input" type="search" placeholder="search">
+    </div>
+  </form>
+  <a href="#">
+    <span><%= image_tag '🦆 icon _heart_.png', alt: 'Favorites', class: 'favourites-logo' %></span>
+  </a>
+  <a href="#">
+    <span><%= image_tag 'Frame 6.png', alt: 'Shopping cart', class: 'shopping-cart-logo' %></span>
+  </a>
+  <div class="button-container">
+    <% if user_signed_in? %>
+      <p>Welcome, <%= current_user.email %>!</p>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "bordered-button palanquin-regular" %>
+      <%= link_to "Edit Profile", edit_user_registration_path, class: "palanquin-regular nav-item" %>
+    <% else %>
+      <p>Not signed in</p>
+      <%= link_to "Sign in", new_user_session_path, id: "sign-in-button", class: "bordered-button palanquin-regular" %>
+      <%= link_to "Sign up", new_user_registration_path, id: "sign-up-button", class: "palanquin-regular nav-item" %>
+    <% end %>
+    <%# if user_signed_in? %>
+      <%#= link_to "Log out", destroy_user_session_path, method: :delete,class:"bordered-button palanquin-regular" %>
+      <%#= button_to "Log out", destroy_user_session_path,data: { turbo_method: :delete } ,class:"bordered-button palanquin-regular" %>
+      <%#= link_to "Edit Profile", edit_user_registration_path,class:"palanquin-regular nav-item" %>
+      <%# else %>
+    <%#= link_to "Sign in", new_user_session_path,id: "sign-in-button",class:"bordered-button palanquin-regular" %>
+      <%#= link_to "Sign up", new_user_registration_path,id: "sign-up-button",class:"palanquin-regular nav-item" %>
+    <%# end %>
+<!--    <button class="bordered-button palanquin-regular">Sign in</button>-->
+  </div>
+</nav>
+
+</header>

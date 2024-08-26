@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV['POSTGRES_HOST'] %>
+
+development:
+  <<: *default
+  database: green_grocer_development
+  username: <%= ENV["GREEN_GROCER_DB_USERNAME"] %>
+  password: <%= ENV["GREEN_GROCER_DB_PASSWORD"] %>
+  port: 5432
+
+test:
+  <<: *default
+  database: green_grocer_test
+  username: <%= ENV["GREEN_GROCER_DB_USERNAME"] %>
+  password: <%= ENV["GREEN_GROCER_DB_PASSWORD"] %>
+  port: 5432
+
+production:
+  <<: *default
+  database: green_grocer_production
+  username: <%= ENV["GREEN_GROCER_DB_USERNAME"] %>
+  password: <%= ENV["GREEN_GROCER_DB_PASSWORD"] %>
+  port: 5432

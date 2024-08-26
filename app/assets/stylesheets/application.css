@@ -1,0 +1,179 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body{
+    position: relative;
+}
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+
+.header {
+width: 100%;
+    height: 90px;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+
+
+}
+
+.search{
+
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    border: 1.5px solid #000; /* Adjust the border color as needed */
+
+}
+.search-input{
+
+    font-size: 20px;
+    font-family: "Palanquin Dark", sans-serif;
+    outline: none;
+    border: none; /* Ensure the input itself has no border */
+    width: 385px;
+
+}
+
+.search-logo{
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    margin-right: 5px;
+}
+.favourites-logo{
+    margin-top: 2px;
+    width: 30px; /* Adjust size as needed */
+    height: 25px;
+}
+.shopping-cart-logo{
+    margin-top: 2px;
+    width: 32px; /* Adjust size as needed */
+    height: 27px;
+}
+.nav-logo {
+    width: 43px; /* Adjust size as needed */
+    height: auto;
+    /*margin-right: 5px;*/
+    padding-top: 5px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+
+}
+
+
+.nav-item{
+
+    height: 100%;
+    text-decoration: none;
+
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bordered-button {
+    font-size: 20px;
+    padding:6px 17px;
+    border: 1.5px solid #000; /* Border style */
+    background-color: transparent; /* Background color */
+    color: #000; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+.hero-section {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100vw; /* Ensure the body spans the full viewport width */
+    height: 100vh; /* Ensure the body spans the full viewport height */
+    background: linear-gradient(to bottom, #fff, #f8f1b0); /* Your gradient background */
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Align children vertically */
+    /*background: linear-gradient(to bottom, #FCFCF7, #F5EEAD); !* Gradient background *!*/
+    /*padding: 350px 0;*/
+    /*text-align: center;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+
+}
+
+.palanquin-thin {
+    font-family: "Palanquin", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.palanquin-extralight {
+    font-family: "Palanquin", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+.palanquin-light {
+    font-family: "Palanquin", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.palanquin-regular {
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+    font-size: 20px; /* Ensure the text size is consistent */
+    color: black;
+    text-decoration:none;
+}
+
+
+
+.palanquin-dark-regular {
+    font-size: 20px;
+    font-family: "Palanquin Dark", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+
+}
+.jomhuria-regular {
+    font-size: 25px;
+    font-family: "Jomhuria", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #000000;
+
+}
+
+
+
+
+
+
+
